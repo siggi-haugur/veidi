@@ -5,34 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
     <link rel="apple-touch-icon" href="ertu_ad_fa_ann_app_logo.png">
-    
     <title>Ertu að fá' ann</title>
     <style>
-        body { background-color: #000; font-family: -apple-system, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; color: white; min-height: 100vh; }
-        .header { margin-top: 60px; margin-bottom: 30px; text-align: center; }
-        .logo { width: 240px; height: auto; }
-        .container { width: 90%; max-width: 450px; padding-bottom: 60px; }
-        .btn { display: block; background: linear-gradient(145deg, #d4af37, #b8860b); color: #000; text-decoration: none; margin-bottom: 15px; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); transition: transform 0.2s; }
-        .btn h2 { margin: 0; font-size: 20px; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; }
-        .btn p { margin: 4px 0 0 0; font-size: 13px; font-weight: 600; opacity: 0.85; }
-        
-        /* Splash screen stillingar */
+        body { background-color: #000; font-family: -apple-system, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; color: white; min-height: 100vh; overflow: hidden; }
+        .header { margin-top: 25px; margin-bottom: 10px; text-align: center; }
+        .logo { width: 170px; height: auto; }
+        .container { width: 92%; max-width: 400px; padding-bottom: 20px; }
+        .btn { display: block; background: linear-gradient(145deg, #d4af37, #b8860b); color: #000; text-decoration: none; margin-bottom: 8px; padding: 12px; border-radius: 12px; text-align: center; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3); }
+        .btn h2 { margin: 0; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+        .btn p { margin: 1px 0 0 0; font-size: 10px; font-weight: 600; opacity: 0.85; }
         #splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; justify-content: center; align-items: center; z-index: 9999; }
-        #splash img { width: 280px; }
+        #splash img { width: 200px; }
     </style>
 </head>
 <body>
-
-<div id="splash">
-    <img src="ertu_ad_fa_ann_app_logo.png" alt="Logo">
-</div>
-
-<div class="header">
-    <img src="ertu_ad_fa_ann_app_logo.png" alt="Logo" class="logo">
-</div>
-
+<div id="splash"><img src="ertu_ad_fa_ann_app_logo.png"></div>
+<div class="header"><img src="ertu_ad_fa_ann_app_logo.png" class="logo"></div>
 <div class="container">
     <a href="https://ertuadfann.is/frettir/" class="btn"><h2>Fréttir</h2><p>Nýjustu fréttir úr veiðinni</p></a>
     <a href="https://ertuadfann.is/rad-haugsins/" class="btn"><h2>Gerum betur</h2><p>Ráðleggingar og fróðleikur</p></a>
@@ -41,9 +30,7 @@
     <a href="https://ertuadfann.is/veiditolur/" class="btn"><h2>Veiðitölur</h2><p>Nýjustu tölur úr laxveiðinni</p></a>
     <a href="https://ertuadfann.is/vedur/" class="btn"><h2>Veður</h2><p>Aðstæður á veiðislóðum</p></a>
 </div>
-
 <script>
-    // Splash screen hverfur eftir 1.2 sekúndur
     setTimeout(() => {
         const splash = document.getElementById('splash');
         splash.style.transition = "opacity 0.5s";
@@ -51,6 +38,5 @@
         setTimeout(() => splash.style.display = 'none', 500);
     }, 1200);
 </script>
-
 </body>
 </html>
