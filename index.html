@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="apple-touch-icon" href="ertu_ad_fa_ann_app_logo.png">
+    
     <title>Ertu að fá' ann</title>
     <style>
         body { background-color: #000; font-family: -apple-system, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; color: white; min-height: 100vh; }
         .header { margin-top: 60px; margin-bottom: 30px; text-align: center; }
-        /* Myndin þín notuð hér */
         .logo { width: 240px; height: auto; }
         .container { width: 90%; max-width: 450px; padding-bottom: 60px; }
         .btn { display: block; background: linear-gradient(145deg, #d4af37, #b8860b); color: #000; text-decoration: none; margin-bottom: 15px; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); transition: transform 0.2s; }
         .btn h2 { margin: 0; font-size: 20px; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; }
         .btn p { margin: 4px 0 0 0; font-size: 13px; font-weight: 600; opacity: 0.85; }
+        
+        /* Splash screen stillingar */
         #splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; justify-content: center; align-items: center; z-index: 9999; }
         #splash img { width: 280px; }
     </style>
@@ -39,6 +43,7 @@
 </div>
 
 <script>
+    // Splash screen hverfur eftir 1.2 sekúndur
     setTimeout(() => {
         const splash = document.getElementById('splash');
         splash.style.transition = "opacity 0.5s";
